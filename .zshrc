@@ -12,6 +12,9 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
+# Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+
 # Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
