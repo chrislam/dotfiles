@@ -1,29 +1,31 @@
-# Composer - global binaries
+# Path modifications
+## Composer - global binaries
 export PATH="$PATH:~/.composer/vendor/bin"
 
-# Homebrew - add binaries to the PATH
+## Homebrew - add binaries to the PATH
 export PATH="/usr/local/sbin:$PATH"
 
-# Add Visual Studio Code (code)
+## Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# Android SDK
+## Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
-# Fastlane
+## Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 
 # Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
 
-# nvm initialisation
+# Node Version Manager
+## nvm initialisation
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# place this after nvm initialization!
+## place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
@@ -45,6 +47,8 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# ZSH extras
+## Order is important
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
