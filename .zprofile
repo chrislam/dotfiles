@@ -3,7 +3,6 @@
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 #### END FIG ENV VARIABLES ####
 # Fergus
-export NPM_TOKEN=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
 export UPLOAD_STORE_FILE=fergus-upload-key.keystore
 export UPLOAD_STORE_PASSWORD=@1q]EwVS-kik0b#Q2[0:
 export UPLOAD_KEY_ALIAS=fergus-upload-key
